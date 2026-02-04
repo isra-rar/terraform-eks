@@ -5,7 +5,7 @@ resource "aws_internet_gateway" "eks_igw" {
     {
       Name = "${var.project_name}-igw",
     },
-    local.tags
+    var.tags
   )
 }
 
@@ -21,6 +21,6 @@ resource "aws_route_table" "eks_public_route_table" {
     {
       Name = "${var.project_name}-public-route-table",
     },
-    local.tags
+    var.tags
   )
 }

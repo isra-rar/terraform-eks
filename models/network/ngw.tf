@@ -5,7 +5,7 @@ resource "aws_eip" "eks_ngw_eip_1a" {
     {
       Name = "${var.project_name}-ngw-eip-1a",
     },
-    local.tags
+    var.tags
   )
 }
 
@@ -16,7 +16,7 @@ resource "aws_eip" "eks_ngw_eip_1b" {
     {
       Name = "${var.project_name}-ngw-eip-1b",
     },
-    local.tags
+    var.tags
   )
 }
 
@@ -28,7 +28,7 @@ resource "aws_nat_gateway" "eks_ngw_1a" {
     {
       Name = "${var.project_name}-ngw-1a",
     },
-    local.tags
+    var.tags
   )
 }
 
@@ -40,7 +40,7 @@ resource "aws_nat_gateway" "eks_ngw_1b" {
     {
       Name = "${var.project_name}-ngw-1b",
     },
-    local.tags
+    var.tags
   )
 }
 
@@ -56,7 +56,7 @@ resource "aws_route_table" "eks_private_route_table_1a" {
     {
       Name = "${var.project_name}-private-route-table-1a",
     },
-    local.tags
+    var.tags
   )
 }
 
@@ -73,6 +73,6 @@ resource "aws_route_table" "eks_private_route_table_1b" {
     {
       Name = "${var.project_name}-private-route-table-1b",
     },
-    local.tags
+    var.tags
   )
 }

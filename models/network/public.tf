@@ -9,7 +9,7 @@ resource "aws_subnet" "eks_subnet_public_1a" {
       Name                     = "${var.project_name}-subnet-public-1a",
       "kubernetes.io/role/elb" = "1"
     },
-    local.tags
+    var.tags
   )
 }
 
@@ -24,7 +24,7 @@ resource "aws_subnet" "eks_subnet_public_1b" {
       Name                     = "${var.project_name}-subnet-public-1b",
       "kubernetes.io/role/elb" = "1"
     },
-    local.tags
+    var.tags
   )
 }
 
