@@ -13,16 +13,10 @@ terraform {
       version = "3.1.1"
     }
   }
-  backend "s3" {
-    bucket = "israeldevops"
-    key    = "terraform-eks/terraform.tfstate"
-    region = "us-east-1"
-  }
-
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 provider "kubernetes" {
